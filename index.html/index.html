@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design a Space You Love</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Function to toggle between Login and Register buttons
+        function toggleAuthButtons() {
+            const loginButton = document.getElementById('login-btn');
+            const registerButton = document.getElementById('register-btn');
+            const loggedIn = loginButton.style.display === 'none';
+
+            if (loggedIn) {
+                loginButton.style.display = 'block';
+                registerButton.style.display = 'block';
+            } else {
+                loginButton.style.display = 'none';
+                registerButton.style.display = 'none';
+            }
+        }
+
+        // Function to show an alert when "Browse Sessions" is clicked
+        function browseSessions() {
+            alert('Redirecting to sessions...');
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <header class="bg-black text-white">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <h1 class="text-xl font-bold">Utopia</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:underline">Instructors</a></li>
+                    <li><a href="#" class="hover:underline">All Categories</a></li>
+                    <li><a href="#" class="hover:underline">View Plans</a></li>
+                </ul>
+            </nav>
+            <div class="flex space-x-4 items-center">
+                <button class="text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1116.5 9.5a7.5 7.5 0 010 15z" />
+                    </svg>
+                </button>
+                <!-- Initially visible Login and Register buttons -->
+                <button id="login-btn" class="text-white bg-white px-4 py-2 rounded hover:bg-gray-200" onclick="toggleAuthButtons()">Login</button>
+                <button id="register-btn" class="text-white bg-black border border-white px-4 py-2 rounded hover:bg-gray-700" onclick="toggleAuthButtons()">Register</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+            <h2 class="text-4xl font-bold mb-4">Design a Space You Love</h2>
+            <p class="text-lg text-gray-700 mb-6">Give your favorite room in the house a first-class face-lift with home renovation expert Shea McGee. Discover how to add new and simple flares that transform the look and feel of the room entirely.</p>
+            <!-- Added JavaScript function onClick event -->
+            <button class="bg-black text-white px-6 py-3 rounded hover:bg-gray-700" onclick="browseSessions()">Browse Sessions</button>
+        </div>
+
+        <div>
+            <img src="image_188.jpg" alt="Smiling woman holding an orange book" class="rounded-xl shadow-lg">
+        </div>
+    </main>
+</body>
+</html>
